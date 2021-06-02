@@ -16,7 +16,7 @@ const ProductScreen = ({match}) => {
             setProduct(data)
         };
         fetchProduct();
-    },[match.params.id]);
+    },[match]);
 
     //const product = produts.find(p => p._id === match.params.id);
     //console.log(product);
@@ -39,7 +39,7 @@ const ProductScreen = ({match}) => {
                             Price: ${product.price}
                         </ListGroup.Item>
                         <ListGroup.Item>
-                            Description: ${product.description}
+                            Description: {product.description}
                         </ListGroup.Item>
                     </ListGroup>
                 </Col>
