@@ -52,7 +52,7 @@ const RegisterScreen = ({location, history}) => {
                         Enter Your Name
                     </Form.Label>
                     <Form.Control type='name' placeholder='Enter your name' value={name}
-                                  onChange={(e)=>setName(e.target.value)}>
+                                  onChange={(e)=>setName(e.target.value)} required>
                     </Form.Control>
                 </Form.Group>
                 <Form.Group controlId='email'>
@@ -60,7 +60,7 @@ const RegisterScreen = ({location, history}) => {
                         Email Address
                     </Form.Label>
                     <Form.Control type='email' placeholder='Enter email' value={email}
-                    onChange={(e)=>setEmail(e.target.value)}>
+                    onChange={(e)=>setEmail(e.target.value)} required>
                     </Form.Control>
                 </Form.Group>
                 <Form.Group controlId='password'>
@@ -68,7 +68,7 @@ const RegisterScreen = ({location, history}) => {
                         Your Password
                     </Form.Label>
                     <Form.Control type='password' placeholder='Enter password' value={password}
-                                  onChange={(e)=>setPassword(e.target.value)}>
+                                  onChange={(e)=>setPassword(e.target.value)} required>
                     </Form.Control>
                 </Form.Group>
                 <Form.Group controlId='confirmPassword'>
@@ -76,7 +76,7 @@ const RegisterScreen = ({location, history}) => {
                         Your Password
                     </Form.Label>
                     <Form.Control type='password' placeholder='Confirm your password' value={confirmPassword}
-                                  onChange={(e)=>setConfirmPassword(e.target.value)}>
+                                  onChange={(e)=>setConfirmPassword(e.target.value)} required>
                     </Form.Control>
                 </Form.Group>
                 <Button type='submit' variant='success'> Register </Button>
