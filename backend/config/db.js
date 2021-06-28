@@ -2,7 +2,7 @@ import mongoose from 'mongoose';
 
 const connectDB = async () =>{
     try {
-        const connect = await mongoose.connect(process.env.MONGO_URI, {useNewUrlParser: true, useUnifiedTopology: true});
+        const connect = await mongoose.connect(process.env.MONGO_URI, {useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex:true});
         console.log(`DB connected: ${connect.connection.host}`.cyan.underline)
     }catch (e) {
         console.error(`${e.message}`.red.underline.bold);
